@@ -8,7 +8,7 @@ class Pokemon {
     }
    }
 
-let groudon = new Pokemon{
+let groudon = new Pokemon() {
 
 }
 // this is gonna be the trainers with two methods to bring back some or ALL of their pokemon
@@ -19,14 +19,14 @@ class Trainer {
 
        
     //    this method will bring back their array of pokemon entirely
-        all() {
-            return: roster;
+        all(){
+            return this.roster;
         };
-        get(pokemonName) {
+        get(pokemonName){
         //loop through the entire pokemon Arrauy and then check the pokemon response.data.name
-        for (let i = 0; i < roster.length; i++){
-            if (pokemonName === roster[i]){
-                return roster[i];}
+        for (let i = 0; i < this.roster.length; i++){
+            if (pokemonName === this.roster[i]){
+                return this.roster[i];}
                  console.log("pokemon not found! Try again!")
             }
         }
@@ -36,3 +36,9 @@ class Trainer {
 let kiko = new Trainer;
 let takeshi = new Trainer;
 let sharhar = new Trainer;
+let kiko
+
+takeshiTrainer.addEventListener('click',function(){
+
+   
+  
