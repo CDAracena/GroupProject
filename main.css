@@ -23,6 +23,7 @@ img {
   position: relative;
   left: 425px;
 }
+
 .title {
   font-family: Audiowide;
   font-size: 46px;
@@ -31,6 +32,11 @@ img {
   word-wrap: break-word;
   text-shadow: 0px 6px 15px rgba(0,0,0,0.8)
 }
+
+.pokemonModul{
+  width: 900px !important
+}
+
 .box {
  opacity: 0.8;
  background: #9D94A5;
@@ -64,3 +70,4 @@ color: #000000;
   position: relative;
   top: 10%;
 }
+
