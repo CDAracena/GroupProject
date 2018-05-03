@@ -10,29 +10,61 @@
 }
 img {
   height: 250px;
-  width: 200px;
 }
 .trainer1 {
   position: relative;
-  top: 390px;
+
   left: 270px;
 }
 .trainer2 {
   position: relative;
-  top: 390px;
+
   left: 320px;
 }
 .trainer3 {
   position: relative;
-  top: 390px;
   left: 360px;
 }
 .title {
   font-family: Audiowide-Regular;
   font-size: 46px;
   color: #FFFFFF;
-  position: relative;
   width: 0;
   word-wrap: break-word;
   text-shadow: 0px 6px 15px rgba(0,0,0,0.8)
+}
+.box {
+ opacity: 0.8;
+ background: #9D94A5;
+ border: 2px solid #545454;
+ border-radius: 45px;
+ max-width: 80%;
+ position: relative;
+ top: 30%;
+}
+
+.box2 {
+  opacity: 0.8;
+  background: #9D94A5;
+  border: 2px solid #545454;
+  border-radius: 45px;
+  position: relative;
+ top: 15%
+}
+
+.welcome-font {
+font-family: Audiowide-Regular;
+font-size: 14px;
+color: #FFFFFF;
+letter-spacing: 1.7px;
+}
+.welcome-sub-font {
+font-family: OpenSans-Semibold;
+font-size: 13px;
+color: #000000;
+}
+
+.img-position {
+  position: relative;
+  top: 20%;
 }
