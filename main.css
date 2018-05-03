@@ -13,20 +13,18 @@ img {
 }
 .trainer1 {
   position: relative;
-
-  left: 270px;
+  left: 290px;
 }
 .trainer2 {
   position: relative;
-
-  left: 320px;
+  left: 345px;
 }
 .trainer3 {
   position: relative;
-  left: 360px;
+  left: 425px;
 }
 .title {
-  font-family: Audiowide-Regular;
+  font-family: Audiowide;
   font-size: 46px;
   color: #FFFFFF;
   width: 0;
@@ -38,20 +36,19 @@ img {
  background: #9D94A5;
  border: 2px solid #545454;
  border-radius: 45px;
- max-width: 80%;
+ max-width: 85%;
  position: relative;
  top: 30%;
 }
-
 .box2 {
   opacity: 0.8;
   background: #9D94A5;
   border: 2px solid #545454;
   border-radius: 45px;
   position: relative;
- top: 15%
+  top: 25%;
+  max-width: 80%;
 }
-
 .welcome-font {
 font-family: Audiowide-Regular;
 font-size: 14px;
@@ -63,8 +60,7 @@ font-family: OpenSans-Semibold;
 font-size: 13px;
 color: #000000;
 }
-
 .img-position {
   position: relative;
-  top: 20%;
+  top: 10%;
 }
