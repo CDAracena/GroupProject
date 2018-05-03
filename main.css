@@ -10,29 +10,67 @@
 }
 img {
   height: 250px;
-  width: 200px;
 }
 .trainer1 {
   position: relative;
-  top: 390px;
-  left: 270px;
+  left: 290px;
 }
 .trainer2 {
   position: relative;
-  top: 390px;
-  left: 320px;
+  left: 345px;
 }
 .trainer3 {
   position: relative;
-  top: 390px;
-  left: 360px;
+  left: 425px;
 }
+
 .title {
+<<<<<<< HEAD
   font-family: 'Audiowide-Regular';
+=======
+  font-family: Audiowide;
+>>>>>>> 974d64058605c7b71d7eea2ca2024cc8ab1d9d0a
   font-size: 46px;
   color: #FFFFFF;
-  position: relative;
   width: 0;
   word-wrap: break-word;
   text-shadow: 0px 6px 15px rgba(0,0,0,0.8)
+}
+
+.pokemonModul{
+  width: 900px !important
+}
+
+.box {
+ opacity: 0.8;
+ background: #9D94A5;
+ border: 2px solid #545454;
+ border-radius: 45px;
+ max-width: 85%;
+ position: relative;
+ top: 30%;
+}
+.box2 {
+  opacity: 0.8;
+  background: #9D94A5;
+  border: 2px solid #545454;
+  border-radius: 45px;
+  position: relative;
+  top: 25%;
+  max-width: 80%;
+}
+.welcome-font {
+font-family: Audiowide-Regular;
+font-size: 14px;
+color: #FFFFFF;
+letter-spacing: 1.7px;
+}
+.welcome-sub-font {
+font-family: OpenSans-Semibold;
+font-size: 13px;
+color: #000000;
+}
+.img-position {
+  position: relative;
+  top: 10%;
 }
