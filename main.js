@@ -36,9 +36,12 @@ class Trainer {
 let kiko = new Trainer;
 let takeshi = new Trainer;
 let sharhar = new Trainer;
-let kiko
 
-takeshiTrainer.addEventListener('click',function(){
+$(".trainer").click (function(){
+    
+
+
+})
 
    
   
