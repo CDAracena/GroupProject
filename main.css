@@ -8,6 +8,7 @@
   background-color: #282727;
   height: 30px;
 }
+
 .hidden {
   display: none;
 }
@@ -43,7 +44,8 @@ img {
   text-shadow: 0px 6px 15px rgba(0,0,0,0.8)
 }
 .pokemonModul{
-  width: 900px !important
+  width: 900px !important;
+  max-width: 900px;
 }
 .box {
  background: rgb(157,148,165, .8);
@@ -53,6 +55,7 @@ img {
  position: relative;
  top: 30%;
  min-height: 300px;
+ 
 }
 .box2 {
   background: rgb(157,148,165, .8);
