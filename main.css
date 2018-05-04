@@ -2,11 +2,14 @@
   background: url("images/background-img.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 60%;
+  min-height: 92vh;
+  width: 100%;
+  height: auto;
+
 }
 .frame {
   background-color: #282727;
-  height: 30px;
+ height: 30px;
 }
 
 .hidden {
@@ -32,11 +35,7 @@ img {
   left: 425px;
 }
 .title {
-
-  font-family: 'Audiowide-Regular';
-
   font-family: Audiowide;
-
   font-size: 46px;
   color: #FFFFFF;
   width: 0;
@@ -55,7 +54,8 @@ img {
  position: relative;
  top: 30%;
  min-height: 300px;
- 
+ margin-left: 4px;
+
 }
 .box2 {
   background: rgb(157,148,165, .8);
@@ -99,4 +99,55 @@ text-shadow: 0px 4px 15px rgba(0,0,0,0.6)
 }
 .open-sans {
   font-family: Open-Sans;
+}
+
+@media only screen and (max-width: 900px) {
+    .title {
+        word-wrap: normal;
+        width: auto;
+    }
+    .box {
+      top: 10%;
+    }
+    .box2 {
+      top: 15%;
+      margin: 0 auto;
+    }
+    .img-position {
+     position: absolute;
+     top: 40vh;
+    }
+    img {
+      height: 225px;
+      cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+   .title {
+      font-size: 38px;
+   }
+    .box {
+      top: 5%;
+      min-height: 150px;
+      max-width: 100%;
+      margin-left: 0;
+    }
+    .box2 {
+      width: 60vw;
+      top: 10%;
+     margin: 0 auto;
+    }
+    .img-position {
+     position: absolute;
+     top: 65vh;
+     left: 7vh;
+    }
+    img {
+      height: 110px;
+      cursor: pointer;
+    }
+    .centered {
+      text-align: center;
+    }
 }
