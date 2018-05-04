@@ -215,10 +215,38 @@ function trainerCLicked(){
 }
 $(".trainer").click(trainerCLicked);
 
+let Trainer1 = document.querySelector("#trainer1");
+let Trainer2 = document.querySelector("#trainer2");
+let Trainer3 = document.querySelector("#trainer3");
+let hiddenRemoval = document.querySelector('.hidden');
+let trainerInfo1 = document.querySelector("#trainer-info-1");
+let trainerInfo2 = document.querySelector("#trainer-info-2");
+let trainerInfo3 = document.querySelector("#trainer-info-3");
 
-// $(".trainer").click(function(){
-//    // return the pokemon in that trainers object
-//     }
-// })
 
+
+Trainer1.addEventListener('mouseover', function(){
+ trainerInfo1.classList.remove("hidden");
+})
+
+Trainer1.addEventListener('mouseout', function(){
+ trainerInfo1.classList.add("hidden");
+})
+
+
+Trainer2.addEventListener('mouseover', function(){
+trainerInfo2.classList.remove("hidden");
+})
+
+Trainer2.addEventListener('mouseout', function(){
+trainerInfo2.classList.add("hidden");
+})
+
+Trainer3.addEventListener('mouseover', function(){
+trainerInfo3.classList.remove("hidden");
+})
+
+Trainer3.addEventListener('mouseout', function(){
+trainerInfo3.classList.add("hidden");
+})
 });
