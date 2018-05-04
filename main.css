@@ -46,8 +46,7 @@ img {
   width: 900px !important
 }
 .box {
- opacity: 0.8;
- background: #9D94A5;
+ background: rgb(157,148,165, .8);
  border: 2px solid #545454;
  border-radius: 45px;
  max-width: 85%;
@@ -56,34 +55,45 @@ img {
  min-height: 300px;
 }
 .box2 {
-  opacity: 0.8;
-  background: #9D94A5;
+  background: rgb(157,148,165, .8);
   border: 2px solid #545454;
   border-radius: 45px;
   position: relative;
   top: 25%;
   max-width: 80%;
 }
-.welcome-font {
+.md-audiowide {
 font-family: Audiowide;
-font-size: 14px;
+font-size: 15px;
 color: #FFFFFF;
 letter-spacing: 1.7px;
+text-shadow: 0px 4px 12px rgba(0,0,0,0.7)
+
 }
-.welcome-sub-font {
+.md-novasq-black {
 font-family: 'Nova Square';
-font-size: 13px;
-color: #000000;
-}
-.img-position {
-  position: relative;
-  top: 10%;
+font-size: 14px;
+color: black;
+text-shadow: 0px 3px 15px rgba(0,0,0,0.4)
 }
 
+.lg-novasq-white {
+font-family: 'Nova Square';
+font-size: 22px;
+color: black;
+text-shadow: 0px 4px 15px rgba(0,0,0,0.6)
+}
+.img-position {
+  position: absolute;
+  left: 25%;
+  top: 60%;
+}
 .pokemonModal{
   width:1000px;
  }
 .modal-dialog{
   margin-left: 24%;
 }
-
+.open-sans {
+  font-family: Open-Sans;
+}
