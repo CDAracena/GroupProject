@@ -15,26 +15,9 @@ let groudonAPI = "http://pokeapi.co/api/v2/pokemon/383/";
 
 let haunterAPI ="http://pokeapi.co/api/v2/pokemon/93/";
 
-class Pokemon {
-  constructor(response) {function trainerCLicked(){
-    let trainerId = this.id;
-    console.log(trainerId);
-    if (trainerId === "trainer1"){
-        firstGif.attr('src', "pokemonSprites/loudredSprite.gif");
-        secondGif.attr('src', "pokemonSprites/delibirdSprite.gif");
-        thirdGif.attr('src', "pokemonSprites/squirtleSprite.gif");
-    } else if (trainerId === "trainer2"){
-        firstGif.attr('src', "pokemonSprites/squirtleSprite.gif");
-        secondGif.attr('src', "pokemonSprites/bouncingMeowth.gif");
-        thirdGif.attr('src', "pokemonSprites/charmanderSprite.gif")
-    }  else {
-        firstGif.attr('src', "pokemonSprites/haunterSprite.gif")
-        secondGif.attr('src', "pokemonSprites/absolSprite.gif")
-        thirdGif.attr('src', "pokemonSprites/groundonSprite.gif")
-    }
 
-}
-$(".trainer").click(trainerCLicked);
+class Pokemon {
+  constructor(response){
     this.name = response.data.name;
     this.hp = response.data.stats[5].base_stat;
     this.attack = response.data.stats[4].base_stat;
@@ -68,128 +51,6 @@ class Trainer{
 
 
 
-// DeliBird Response
-axios.get(delibirdAPI)
-.then (function(response) {
-  console.log(response);
-delibird = new Pokemon(response);
-console.log(delibird)
-
-  document.querySelector(".modal-body").innerText = delibird.name + delibird.hp + delibird.attack + delibird.defense;
-  let abilityArr = delibird.abilities;
-  let text = [""];
-  for (let i = 0; i < abilityArr.length; i++) {
-    text += abilityArr[i].ability.name + "<br>";
-  }
-})
-
-// Squirtle Info
-axios.get(squirtleAPI)
-.then (function(response) {
-  console.log(response)
-
-  let squirtle = new Pokemon(response);
-
-  document.querySelector(".modal-body").innerText = squirtle.name + squirtle.hp + squirtle.attack + squirtle.defense;
-  let abilityArr = squirtle.abilities;
-  let text=[""];
-  for (let i = 0; i < abilityArr.length; i++) {
-    text += abilityArr[i].ability.name + "<br>";
-  }
-})
-
-// Loudred Info
-axios.get(loudredAPI)
-.then(function(response) {
-  console.log(response)
-
-  let loudred = new Pokemon(response);
-
-  document.querySelector('.modal-body').innerText = loudred.name + loudred.hp + loudred.attack + loudred.defense;
-  let abilityArr = loudred.abilities;
-  let text=[""];
-  for (let i = 0; i < abilityArr.length; i++) {
-    text += abilityArr[i].ability.name + "<br>";
-  }
-})
-
-// Absol Info
-axios.get(absolAPI)
-.then(function(response){
-  console.log(response)
-
-  let absol = new Pokemon(response);
-
-  document.querySelector('.modal-body').innerText = absol.name + absol.hp + absol.attack + absol.defense;
-  let abilityArr = absol.abilities;
-  let text = [""];
-  for (let i = 0; i < abilityArr.length; i++) {
-    text += abilityArr[i].ability.name + "<br>";
-  }
-})
-
-// Haunter Info
-axios.get(haunterAPI)
-.then(function(response){
-  console.log(response)
-
-  let haunter = new Pokemon(response);
-
-  document.querySelector('.modal-body').innerText = haunter.name + haunter.hp + haunter.attack + haunter.defense;
-  let abilityArr = haunter.abilities;
-  let text = [""];
-  for (let i = 0; i < abilityArr.length; i++) {
-    text += abilityArr[i].ability.name + "<br>";
-  }
-})
-
-// Groudon Info
-axios.get(groudonAPI)
-.then(function(response){
-  console.log(response)
-
-  let groudon = new Pokemon(response);
-
-  document.querySelector('.modal-body').innerText = groudon.name + groudon.hp + groudon.attack + groudon.defense;
-  let abilityArr = groudon.abilities;
-  let text = [""];
-  for (let i = 0; i < abilityArr.length; i++) {
-    text += abilityArr[i].ability.name + "<br>";
-  }
-})
-
-
-// Meowth Info
-axios.get(meowthAPI)
-.then(function(response){
-  console.log(response)
-
-  let meowth = new Pokemon(response);
-
-  document.querySelector('.modal-body').innerText = meowth.name + meowth.hp + meowth.attack + meowth.defense;
-  let abilityArr = meowth.abilities;
-  let text = [""];
-  for (let i = 0; i < abilityArr.length; i++) {
-    text += abilityArr[i].ability.name + "<br>";
-  }
-})
-
-
-// Charmander Info
-axios.get(charmanderAPI)
-.then(function(response){
-  console.log(response)
-
-  let charmander = new Pokemon(response);
-
-  document.querySelector('.modal-body').innerText = charmander.name + charmander.hp + charmander.attack + charmander.defense;
-  let abilityArr = charmander.abilities;
-  let text = [""];
-  for (let i = 0; i < abilityArr.length; i++) {
-    text += abilityArr[i].ability.name + "<br>";
-  }
-})
-
 // TypeWriter Function
 let i = 0;
 let txt = 'You have arrived to the VAPORWAVE GYM. Here you can see the stats of the best pokemon trainers in the district. HOVER TO BEGIN!';
@@ -208,7 +69,7 @@ let trainer1 = new Trainer;
 trainer1.add("squirtle");
 trainer1.add("meowth");
 trainer1.add("charmander");
-console.log(trainer1);
+
 let trainer2 = new Trainer;
 let trainer3 = new Trainer;
 
@@ -223,16 +84,167 @@ function trainerCLicked(){
         firstGif.attr('src', "pokemonSprites/loudredSprite.gif");
         secondGif.attr('src', "pokemonSprites/delibirdSprite.gif");
         thirdGif.attr('src', "pokemonSprites/squirtleSprite.gif");
+
+        axios.get(delibirdAPI)
+        .then (function(response) {
+          console.log(response);
+        delibird = new Pokemon(response);
+        console.log(delibird)
+
+          document.querySelector(".modalName2").innerText = delibird.name;
+          document.querySelector(".modalAttack2").innerText = delibird.attack
+          document.querySelector(".modalDefense2").innerText = delibird.defense;
+          document.querySelector(".modalHp2").innerText = delibird.hp;
+          let abilityArr = delibird.abilities;
+          let text = [""];
+          for (let i = 0; i < abilityArr.length; i++) {
+            text += abilityArr[i].ability.name + ", ";
+            document.querySelector(".modalAbilities2").innerText = text
+        };
+      })
+      axios.get(squirtleAPI)
+      .then (function(response) {
+
+        let squirtle = new Pokemon(response);
+
+        document.querySelector(".modalName3").innerText = squirtle.name
+        document.querySelector(".modalAttack3").innerText = squirtle.attack;
+        document.querySelector(".modalDefense3").innerText = squirtle.defense;
+        document.querySelector(".modalHp3").innerText = squirtle.hp;
+        let abilityArr = squirtle.abilities;
+        let text=[""];
+        for (let i = 0; i < abilityArr.length; i++) {
+          text += abilityArr[i].ability.name + ", ";
+          document.querySelector(".modalAbilities3").innerText = text;
+        }
+      })
+      axios.get(loudredAPI)
+      .then(function(response) {
+
+        let loudred = new Pokemon(response);
+
+        document.querySelector('.modalName1').innerText = loudred.name;
+        document.querySelector('.modalAttack1').innerText = loudred.attack;
+        document.querySelector('.modalDefense1').innerText = loudred.defense;
+        document.querySelector('.modalHp1').innerText = loudred.hp;
+        let abilityArr = loudred.abilities;
+        let text=[""];
+        for (let i = 0; i < abilityArr.length; i++) {
+          text += abilityArr[i].ability.name + ", ";
+          document.querySelector('.modalAbilities1').innerText = text;
+        }
+      })
     } else if (trainerId === "trainer2"){
         firstGif.attr('src', "pokemonSprites/squirtleSprite.gif");
         secondGif.attr('src', "pokemonSprites/bouncingMeowth.gif");
-        thirdGif.attr('src', "pokemonSprites/charmanderSprite.gif")
+        thirdGif.attr('src', "pokemonSprites/charmanderSprite.gif");
+        axios.get(squirtleAPI)
+        .then (function(response) {
+
+          let squirtle = new Pokemon(response);
+
+          document.querySelector(".modalName1").innerText = squirtle.name
+          document.querySelector(".modalAttack1").innerText = squirtle.attack;
+          document.querySelector(".modalDefense1").innerText = squirtle.defense;
+          document.querySelector(".modalHp1").innerText = squirtle.hp;
+          let abilityArr = squirtle.abilities;
+          let text=[""];
+          for (let i = 0; i < abilityArr.length; i++) {
+            text += abilityArr[i].ability.name + ", ";
+            document.querySelector(".modalAbilities1").innerText = text;
+          }
+        })
+
+        axios.get(meowthAPI)
+        .then(function(response){
+
+          let meowth = new Pokemon(response);
+
+          document.querySelector('.modalName2').innerText = meowth.name;
+          document.querySelector('.modalAttack2').innerText = meowth.attack;
+          document.querySelector('.modalDefense2').innerText = meowth.defense;
+          document.querySelector('.modalHp2').innerText = meowth.hp;
+
+          let abilityArr = meowth.abilities;
+          let text = [""];
+          for (let i = 0; i < abilityArr.length; i++) {
+            text += abilityArr[i].ability.name + ", ";
+            document.querySelector('.modalAbilities1').innertext = text;
+          }
+        })
+        axios.get(charmanderAPI)
+        .then(function(response){
+
+          let charmander = new Pokemon(response);
+
+          document.querySelector('.modalName3').innerText = charmander.name;
+          document.querySelector('.modalAttack3').innerText = charmander.attack;
+          document.querySelector('.modalDefense3').innerText = charmander.defense;
+          document.querySelector('.modalHp3').innerText = charmander.hp;
+          let abilityArr = charmander.abilities;
+          let text = [""];
+          for (let i = 0; i < abilityArr.length; i++) {
+            text += abilityArr[i].ability.name + ", ";
+            document.querySelector('.modalAbilities3').innerText = text;
+          }
+        })
     }  else {
         firstGif.attr('src', "pokemonSprites/haunterSprite.gif")
         secondGif.attr('src', "pokemonSprites/absolSprite.gif")
         thirdGif.attr('src', "pokemonSprites/groundonSprite.gif")
+
+        axios.get(haunterAPI)
+        .then(function(response){
+
+          let haunter = new Pokemon(response);
+
+          document.querySelector('.modalName1').innerText = haunter.name;
+          document.querySelector('.modalAttack1').innerText = haunter.attack;
+          document.querySelector('.modalDefense1').innerText = haunter.defense;
+          document.querySelector('.modalHp1').innerText = haunter.hp;
+          let abilityArr = haunter.abilities;
+          let text = [""];
+          for (let i = 0; i < abilityArr.length; i++) {
+            text += abilityArr[i].ability.name + ", ";
+            document.querySelector('.modalAbilities1').innerText = text;
+          }
+        })
+
+        axios.get(absolAPI)
+        .then(function(response){
+
+          let absol = new Pokemon(response);
+
+          document.querySelector('.modalName2').innerText = absol.name;
+          document.querySelector('.modalAttack2').innerText = absol.attack;
+          document.querySelector('.modalDefense2').innerText = absol.defense;
+          document.querySelector('.modalHp2').innerText = absol.hp;
+          let abilityArr = absol.abilities;
+          let text = [""];
+          for (let i = 0; i < abilityArr.length; i++) {
+            text += abilityArr[i].ability.name + ", ";
+            document.querySelector('.modalAbilities2').innerText = text;
+          }
+        })
+        axios.get(groudonAPI)
+        .then(function(response){
+
+          let groudon = new Pokemon(response);
+
+          document.querySelector('.modalName3').innerText = groudon.name;
+          document.querySelector('.modalAttack3').innerText = groudon.attack;
+          document.querySelector('.modalDefense3').innerText = groudon.defense;
+          document.querySelector('.modalHp3').innerText = groudon.hp;
+          let abilityArr = groudon.abilities;
+          let text = [""];
+          for (let i = 0; i < abilityArr.length; i++) {
+            text += abilityArr[i].ability.name + ", ";
+            document.querySelector('.modalAbilities3').innerText = text;
+          }
+        })
     }
 }
+
 
 $(".trainer").click(trainerCLicked);
 
