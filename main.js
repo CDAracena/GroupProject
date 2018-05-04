@@ -1,4 +1,4 @@
-
+$( document ).ready(function() {
 let delibirdAPI = "http://pokeapi.co/api/v2/pokemon/225/";
 
 let squirtleAPI = "http://pokeapi.co/api/v2/pokemon/7/";
@@ -99,7 +99,7 @@ axios.get(absolAPI)
 
   let absol = new Pokemon(response);
 
-  document.querySelector('#pokemonModal').innerText = absol.name + absol.hp + absol.attack + absol.defense;
+  document.querySelector('#poke-3').innerText = absol.name + absol.hp + absol.attack + absol.defense;
   let abilityArr = absol.abilities;
   let text = [""];
   for (let i = 0; i < abilityArr.length; i++) {
@@ -145,7 +145,7 @@ axios.get(meowthAPI)
 
   let meowth = new Pokemon(response);
 
-  document.querySelector('#pokemonModal').innerText = meowth.name + meowth.hp + meowth.attack + meowth.defense;
+  document.querySelector('#poke-2').innerText = meowth.name + meowth.hp + meowth.attack + meowth.defense;
   let abilityArr = meowth.abilities;
   let text = [""];
   for (let i = 0; i < abilityArr.length; i++) {
@@ -161,13 +161,27 @@ axios.get(charmanderAPI)
 
   let charmander = new Pokemon(response);
 
-  document.querySelector('#pokemonModal').innerText = charmander.name + charmander.hp + charmander.attack + charmander.defense;
+  document.querySelector('#poke-1').innerText = charmander.name + charmander.hp + charmander.attack + charmander.defense;
   let abilityArr = charmander.abilities;
   let text = [""];
   for (let i = 0; i < abilityArr.length; i++) {
     text += abilityArr[i].ability.name + "<br>";
   }
 })
+  
+// TypeWriter Function 
+let i = 0;
+let txt = 'You have arrived to the VAPORWAVE GYM. Here you can see the stats of the best pokemon trainers of the district';
+let speed = 100
+function typeWriter() {
+   if (i < txt.length) {
+      $("#typeWriter").html($("#typeWriter").html() + txt.charAt(i));
+      i++
+      setTimeout(typeWriter, speed);
+    }
+  }
+typeWriter();
+
 
 let trainer1 = new Trainer;
 trainer1.add("squirtle");
@@ -198,12 +212,48 @@ function trainerCLicked(){
         thirdGif.attr('src', "pokemonSprites/groundonSprite.gif")
     }
 
+
+let Trainer1 = document.querySelector(".trainer1");
+let Trainer2 = document.querySelector(".trainer2");
+let Trainer3 = document.querySelector(".trainer3");
+
+Trainer1.addEventListener('mouseover', function(){
+  document.querySelector('#trainer-name').innerText = "Kiko";
+})
+
+Trainer1.addEventListener('mouseout', function(){
+  document.querySelector('#trainer-name').innerText = "Trainer Name";
+})
+
+
+Trainer2.addEventListener('mouseover', function(){
+  document.querySelector('#trainer-name').innerText = "ShayShay";
+})
+
+Trainer2.addEventListener('mouseout', function(){
+  document.querySelector('#trainer-name').innerText = "Trainer Name";
+})
+
+Trainer3.addEventListener('mouseover', function(){
+  document.querySelector('#trainer-name').innerText = "Guy Fieri";
+})
+
+Trainer3.addEventListener('mouseout', function(){
+  document.querySelector('#trainer-name').innerText = "Trainer Name";
+})
+
 }
 $(".trainer").click(trainerCLicked);
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 6ca89862e2c97e8547a6976f3e1e0fc6c5d9672f
 // $(".trainer").click(function(){
 //    // return the pokemon in that trainers object
 //     }
 // })
+  
+});
+
