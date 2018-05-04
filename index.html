@@ -115,13 +115,16 @@
         <div class="img-position">
 
          <div class="modal fade" id="myModal" role="dialog">
-             <div class="modal-dialog" id="pokemonModal">
+             <div class="modal-dialog modal-sm" id="pokemonModal">
                  <div class="modal-content pokemonModal ">
                      <div class="modal-header">
-                       <button type="button" class="close" data-dismiss="modal">&times;</button>
-                       <h4 class="modal-title">POKEMON ROSTER</h4>
+                       <div class= "row text-center">
+                         <div class = "col-md-12 text-center">
+                           <h2 class="modal-title text-center">POKEMON ROSTER</h2>
+                        </div>
+                      </div>
                      </div>
-                     <div class="modal-body row border-top">
+                     <div class="modal-body row">
                        <div class="col-sm-4 pull-left">
                          <img id ="firstGif" class ="gif" src="">
                        </div>
@@ -131,9 +134,9 @@
                        <div class="col-sm-4 float-right">
                          <img id = "thirdGif"  class ="gif float-right" src ="">
                        </div>
-                         <p>HERES SOME STUFF ABOUT THEMZ</p>
+                         
                        </div>
-                       <div class =row>
+                       <div class ="row text-center">
                          <!-- POKEMON STATS WILL GO HERE FROM API-->
                          <div class = "col-sm-4">
                            <p class = "modalName1 stat"> Name:</p>
@@ -180,7 +183,11 @@
     </div>
   </div>
 </div>
-
+<audio controls>
+    <source src="images/3minTitle.mp3" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
 <div class="container-fluid frame"></div>
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
