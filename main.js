@@ -234,7 +234,7 @@ function trainerCLicked(){
     }
 }
 
-}
+
 $(".trainer").click(trainerCLicked);
 
 let Trainer1 = document.querySelector("#trainer1");
