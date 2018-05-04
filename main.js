@@ -29,6 +29,7 @@ class Trainer{
     constructor(name){
         this.name=name;
         this.roster = {};
+
         }
         //lets you add a pokemon AND then gets the API info and plugs it in 
         add(thisName){
@@ -46,7 +47,9 @@ class Trainer{
         }
 
     }
+
 let delibird= {};
+
 // DeliBird Response
 axios.get(delibirdAPI)
 .then (function(response) {
@@ -168,10 +171,10 @@ axios.get(charmanderAPI)
     text += abilityArr[i].ability.name + "<br>";
   }
 })
-  
-// TypeWriter Function 
+
+// TypeWriter Function
 let i = 0;
-let txt = 'You have arrived to the VAPORWAVE GYM. Here you can see the stats of the best pokemon trainers of the district';
+let txt = 'You have arrived to the VAPORWAVE GYM. Here you can see the stats of the best pokemon trainers in the district. HOVER TO BEGIN!';
 let speed = 100
 function typeWriter() {
    if (i < txt.length) {
@@ -190,7 +193,7 @@ trainer1.add("charmander");
 console.log(trainer1);
 let trainer2 = new Trainer;
 let trainer3 = new Trainer;
- 
+
 let firstGif = $('#firstGif');
 let secondGif = $('#secondGif');
 let thirdGif = $('#thirdGif');
@@ -200,7 +203,7 @@ function trainerCLicked(){
     console.log(trainerId);
     if (trainerId === "trainer1"){
         firstGif.attr('src', "pokemonSprites/loudredSprite.gif");
-        secondGif.attr('src', "pokemonSprites/delibirdSprite.gif"); 
+        secondGif.attr('src', "pokemonSprites/delibirdSprite.gif");
         thirdGif.attr('src', "pokemonSprites/squirtleSprite.gif");
     } else if (trainerId === "trainer2"){
         firstGif.attr('src', "pokemonSprites/squirtleSprite.gif");
@@ -242,6 +245,7 @@ function trainerCLicked(){
 // Trainer3.addEventListener('mouseout', function(){
 //   document.querySelector('#trainer-name').innerText = "Trainer Name";
 // })
+
 
 
 $(".trainer").click(trainerCLicked);});
