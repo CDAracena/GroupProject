@@ -73,9 +73,11 @@ color: #000000;
   position: relative;
   top: 10%;
 }
+
 .pokemonModal{
   width:1000px;
  }
 .modal-dialog{
   margin-left: 24%;
 }
+
