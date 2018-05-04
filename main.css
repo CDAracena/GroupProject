@@ -15,6 +15,9 @@ img {
   height: 250px;
   cursor: pointer;
 }
+.gif{
+  height: 150px;
+}
 .trainer1 {
   position: relative;
   left: 290px;
@@ -72,3 +75,11 @@ color: #000000;
   position: relative;
   top: 10%;
 }
+
+.pokemonModal{
+  width:1000px;
+ }
+.modal-dialog{
+  margin-left: 24%;
+}
+
