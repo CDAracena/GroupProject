@@ -29,7 +29,7 @@ class Trainer{
     constructor(name){
         this.name=name;
         this.roster = {};
-      
+
         }
         add(thisName){
             let pokemonIndex = this.roster.length+1;
@@ -47,7 +47,7 @@ class Trainer{
 
     }
 
-    
+
 // DeliBird Response
 axios.get(delibirdAPI)
 .then (function(response) {
@@ -133,7 +133,7 @@ axios.get(groudonAPI)
   let abilityArr = groudon.abilities;
   let text = [""];
   for (let i = 0; i < abilityArr.length; i++) {
-    text += ability[i].ability.name + "<br>";
+    text += abilityArr[i].ability.name + "<br>";
   }
 })
 
@@ -149,7 +149,7 @@ axios.get(meowthAPI)
   let abilityArr = meowth.abilities;
   let text = [""];
   for (let i = 0; i < abilityArr.length; i++) {
-    text += ability[i].ability.name + "<br>";
+    text += abilityArr[i].ability.name + "<br>";
   }
 })
 
@@ -176,7 +176,7 @@ trainer1.add("charmander");
 console.log(trainer1);
 let trainer2 = new Trainer;
 let trainer3 = new Trainer;
- 
+
 let firstGif = $('#firstGif');
 let secondGif = $('#secondGif');
 let thirdGif = $('#thirdGif');
@@ -186,7 +186,7 @@ function trainerCLicked(){
     console.log(trainerId);
     if (trainerId === "trainer1"){
         firstGif.attr('src', "pokemonSprites/loudredSprite.gif");
-        secondGif.attr('src', "pokemonSprites/delibirdSprite.gif"); 
+        secondGif.attr('src', "pokemonSprites/delibirdSprite.gif");
         thirdGif.attr('src', "pokemonSprites/squirtleSprite.gif");
     } else if (trainerId === "trainer2"){
         firstGif.attr('src', "pokemonSprites/squirtleSprite.gif");
@@ -200,9 +200,9 @@ function trainerCLicked(){
 
 }
 $(".trainer").click(trainerCLicked);
-    
 
-    
+
+
 // $(".trainer").click(function(){
 //    // return the pokemon in that trainers object
 //     }
