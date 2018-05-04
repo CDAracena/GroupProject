@@ -240,33 +240,29 @@ $(".trainer").click(trainerCLicked);
 let Trainer1 = document.querySelector("#trainer1");
 let Trainer2 = document.querySelector("#trainer2");
 let Trainer3 = document.querySelector("#trainer3");
-let hiddenRemoval = document.querySelector('.hidden');
+let trainerInfo1 = document.querySelector("#trainer-info-1");
+let trainerInfo2 = document.querySelector("#trainer-info-2");
+let trainerInfo3 = document.querySelector("#trainer-info-3");
 
 
 
 Trainer1.addEventListener('mouseover', function(){
-  hiddenRemoval.style.display="block";
+ trainerInfo1.classList.remove("hidden");
 })
-
 Trainer1.addEventListener('mouseout', function(){
-  hiddenRemoval.style.display="none";
+ trainerInfo1.classList.add("hidden");
 })
-
-
 Trainer2.addEventListener('mouseover', function(){
-  hiddenRemoval.style.display="block";
+trainerInfo2.classList.remove("hidden");
 })
-
 Trainer2.addEventListener('mouseout', function(){
-  hiddenRemoval.style.display="none";
+trainerInfo2.classList.add("hidden");
 })
-
 Trainer3.addEventListener('mouseover', function(){
-  hiddenRemoval.style.display="block";
+trainerInfo3.classList.remove("hidden");
 })
-
 Trainer3.addEventListener('mouseout', function(){
-  hiddenRemoval.style.display="none";
+trainerInfo3.classList.add("hidden");
 })
 
 });
