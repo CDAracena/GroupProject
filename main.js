@@ -77,7 +77,7 @@ axios.get(absolAPI)
 
   let absol = new Pokemon(response);
 
-  document.querySelector('#pokemonModal').innerText = absol.name + absol.hp + absol.attack + absol.defense;
+  document.querySelector('#poke-3').innerText = absol.name + absol.hp + absol.attack + absol.defense;
   let abilityArr = absol.abilities;
   let text = [""];
   for (let i = 0; i < abilityArr.length; i++) {
@@ -122,7 +122,7 @@ axios.get(meowthAPI)
 
   let meowth = new Pokemon(response);
 
-  document.querySelector('#pokemonModal').innerText = meowth.name + meowth.hp + meowth.attack + meowth.defense;
+  document.querySelector('#poke-2').innerText = meowth.name + meowth.hp + meowth.attack + meowth.defense;
   let abilityArr = meowth.abilities;
   let text = [""];
   for (let i = 0; i < abilityArr.length; i++) {
@@ -138,7 +138,7 @@ axios.get(charmanderAPI)
 
   let charmander = new Pokemon(response);
 
-  document.querySelector('#pokemonModal').innerText = charmander.name + charmander.hp + charmander.attack + charmander.defense;
+  document.querySelector('#poke-1').innerText = charmander.name + charmander.hp + charmander.attack + charmander.defense;
   let abilityArr = charmander.abilities;
   let text = [""];
   for (let i = 0; i < abilityArr.length; i++) {
@@ -146,3 +146,31 @@ axios.get(charmanderAPI)
   }
 })
 
+let Trainer1 = document.querySelector(".trainer1");
+let Trainer2 = document.querySelector(".trainer2");
+let Trainer3 = document.querySelector(".trainer3");
+
+Trainer1.addEventListener('mouseover', function(){
+  document.querySelector('#trainer-name').innerText = "Kiko";
+})
+
+Trainer1.addEventListener('mouseout', function(){
+  document.querySelector('#trainer-name').innerText = "Trainer Name";
+})
+
+
+Trainer2.addEventListener('mouseover', function(){
+  document.querySelector('#trainer-name').innerText = "ShayShay";
+})
+
+Trainer2.addEventListener('mouseout', function(){
+  document.querySelector('#trainer-name').innerText = "Trainer Name";
+})
+
+Trainer3.addEventListener('mouseover', function(){
+  document.querySelector('#trainer-name').innerText = "Guy Fieri";
+})
+
+Trainer3.addEventListener('mouseout', function(){
+  document.querySelector('#trainer-name').innerText = "Trainer Name";
+})
