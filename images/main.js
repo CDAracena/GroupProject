@@ -19,20 +19,7 @@ class Pokemon {
   constructor(response) {function trainerCLicked(){
     let trainerId = this.id;
     console.log(trainerId);
-    if (trainerId === "trainer1"){
-        firstGif.attr('src', "pokemonSprites/loudredSprite.gif");
-        secondGif.attr('src', "pokemonSprites/delibirdSprite.gif");
-        thirdGif.attr('src', "pokemonSprites/squirtleSprite.gif");
-    } else if (trainerId === "trainer2"){
-        firstGif.attr('src', "pokemonSprites/squirtleSprite.gif");
-        secondGif.attr('src', "pokemonSprites/bouncingMeowth.gif");
-        thirdGif.attr('src', "pokemonSprites/charmanderSprite.gif")
-    }  else {
-        firstGif.attr('src', "pokemonSprites/haunterSprite.gif")
-        secondGif.attr('src', "pokemonSprites/absolSprite.gif")
-        thirdGif.attr('src', "pokemonSprites/groundonSprite.gif")
-    }
-
+   
 }
 $(".trainer").click(trainerCLicked);
     this.name = response.data.name;
@@ -66,13 +53,15 @@ class Trainer{
 
     }
 
-
+let kiko = new Trainer;
+let guy = new Trainer;
+let shayShay = new Trainer
 
 // DeliBird Response
 axios.get(delibirdAPI)
 .then (function(response) {
   console.log(response);
-delibird = new Pokemon(response);
+let delibird = new Pokemon(response);
 console.log(delibird)
 
   document.querySelector(".modal-body").innerText = delibird.name + delibird.hp + delibird.attack + delibird.defense;
@@ -234,34 +223,39 @@ function trainerCLicked(){
     }
 }
 
+
 $(".trainer").click(trainerCLicked);
 
 let Trainer1 = document.querySelector("#trainer1");
 let Trainer2 = document.querySelector("#trainer2");
 let Trainer3 = document.querySelector("#trainer3");
-let trainerInfo1 = document.querySelector("#trainer-info-1");
-let trainerInfo2 = document.querySelector("#trainer-info-2");
-let trainerInfo3 = document.querySelector("#trainer-info-3");
+let hiddenRemoval = document.querySelector('.hidden');
 
 
 
 Trainer1.addEventListener('mouseover', function(){
- trainerInfo1.classList.remove("hidden");
+  hiddenRemoval.style.display="block";
 })
+
 Trainer1.addEventListener('mouseout', function(){
- trainerInfo1.classList.add("hidden");
+  hiddenRemoval.style.display="none";
 })
+
+
 Trainer2.addEventListener('mouseover', function(){
-trainerInfo2.classList.remove("hidden");
+  hiddenRemoval.style.display="block";
 })
+
 Trainer2.addEventListener('mouseout', function(){
-trainerInfo2.classList.add("hidden");
+  hiddenRemoval.style.display="none";
 })
+
 Trainer3.addEventListener('mouseover', function(){
-trainerInfo3.classList.remove("hidden");
+  hiddenRemoval.style.display="block";
 })
+
 Trainer3.addEventListener('mouseout', function(){
-trainerInfo3.classList.add("hidden");
+  hiddenRemoval.style.display="none";
 })
 
 });
