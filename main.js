@@ -49,11 +49,12 @@ class Trainer{
         this.roster = {};
 
         }
+        //lets you add a pokemon AND then gets the API info and plugs it in
         add(thisName){
-            let pokemonIndex = this.roster.length+1;
-            // let thisApi = pokemonNameString+"API"
-            // console.log(thisApi)
-            // this.roster.thisApi = thisApi;
+            let pokemonIndex = Object.keys(this.roster).length+1;
+            let thisApi = thisName+"API"
+            console.log(thisApi)
+            this.roster.thisApi = thisApi;
             this.roster[pokemonIndex] = thisName;
         }
         get(pokemonName){
@@ -66,11 +67,13 @@ class Trainer{
     }
 
 
+
 // DeliBird Response
 axios.get(delibirdAPI)
 .then (function(response) {
   console.log(response);
-let delibird = new Pokemon(response);
+delibird = new Pokemon(response);
+console.log(delibird)
 
   document.querySelector(".modal-body").innerText = delibird.name + delibird.hp + delibird.attack + delibird.defense;
   let abilityArr = delibird.abilities;
@@ -189,7 +192,7 @@ axios.get(charmanderAPI)
 
 // TypeWriter Function
 let i = 0;
-let txt = 'You have arrived to the VAPORWAVE GYM. Here you can see the stats of the best pokemon trainers of the district';
+let txt = 'You have arrived to the VAPORWAVE GYM. Here you can see the stats of the best pokemon trainers in the district. HOVER TO BEGIN!';
 let speed = 100
 function typeWriter() {
    if (i < txt.length) {
@@ -229,6 +232,7 @@ function trainerCLicked(){
         secondGif.attr('src', "pokemonSprites/absolSprite.gif")
         thirdGif.attr('src', "pokemonSprites/groundonSprite.gif")
     }
+}
 
 }
 $(".trainer").click(trainerCLicked);
@@ -264,11 +268,5 @@ Trainer3.addEventListener('mouseover', function(){
 Trainer3.addEventListener('mouseout', function(){
   hiddenRemoval.style.display="none";
 })
-
-
-// $(".trainer").click(function(){
-//    // return the pokemon in that trainers object
-//     }
-// })
 
 });
