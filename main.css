@@ -31,7 +31,11 @@ img {
   left: 425px;
 }
 .title {
+
+  font-family: 'Audiowide-Regular';
+
   font-family: Audiowide;
+
   font-size: 46px;
   color: #FFFFFF;
   width: 0;
