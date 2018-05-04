@@ -100,3 +100,32 @@ text-shadow: 0px 4px 15px rgba(0,0,0,0.6)
 .open-sans {
   font-family: Open-Sans;
 }
+.col-sm-4 p{
+  justify-content: center;
+  font-family: Open-Sans;
+}
+/* loading CSS for possible loading animation while api loads */
+/* .modal {
+  display:    none;
+  position:   fixed;
+  z-index:    2;
+  top:        0;
+  left:       0;
+  height:     100%;
+  width:      100%;
+  background: url('http://i.stack.imgur.com/FhHRx.gif') 
+              50% 50% 
+              no-repeat;
+} */
+
+/* When the body has the loading class, we turn
+ the scrollbar off with overflow:hidden */
+/* body.loading .modal {
+  overflow: hidden;   
+} */
+
+/* Anytime the body has the loading class, our
+ modal element will be visible */
+/* body.loading .modal {
+  display: block;
+} */

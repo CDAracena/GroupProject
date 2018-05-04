@@ -80,6 +80,10 @@ let thirdGif = $('#thirdGif');
 function trainerCLicked(){
     let trainerId = this.id;
     console.log(trainerId);
+    let statsArr = document.getElementsByClassName('stat')
+    for (let i=0;i<statsArr.length; i++){
+      statsArr[i].innerText=""
+    };
     if (trainerId === "trainer1"){
         firstGif.attr('src', "pokemonSprites/loudredSprite.gif");
         secondGif.attr('src', "pokemonSprites/delibirdSprite.gif");
@@ -91,15 +95,15 @@ function trainerCLicked(){
         delibird = new Pokemon(response);
         console.log(delibird)
 
-          document.querySelector(".modalName2").innerText = delibird.name;
-          document.querySelector(".modalAttack2").innerText = delibird.attack
-          document.querySelector(".modalDefense2").innerText = delibird.defense;
-          document.querySelector(".modalHp2").innerText = delibird.hp;
+          document.querySelector(".modalName2").innerText += " Name " + delibird.name;
+          document.querySelector(".modalAttack2").innerText += "Attack: " + delibird.attack
+          document.querySelector(".modalDefense2").innerText += "Defense " + delibird.defense;
+          document.querySelector(".modalHp2").innerText += "Hit Points: "+  delibird.hp;
           let abilityArr = delibird.abilities;
-          let text = [""];
+          let text = [];
           for (let i = 0; i < abilityArr.length; i++) {
             text += abilityArr[i].ability.name + ", ";
-            document.querySelector(".modalAbilities2").innerText = text
+            document.querySelector(".modalAbilities2").innerText = "Abilities: " + text
         };
       })
       axios.get(squirtleAPI)
@@ -107,15 +111,15 @@ function trainerCLicked(){
 
         let squirtle = new Pokemon(response);
 
-        document.querySelector(".modalName3").innerText = squirtle.name
-        document.querySelector(".modalAttack3").innerText = squirtle.attack;
-        document.querySelector(".modalDefense3").innerText = squirtle.defense;
-        document.querySelector(".modalHp3").innerText = squirtle.hp;
+        document.querySelector(".modalName3").innerText += " Name " + squirtle.name
+        document.querySelector(".modalAttack3").innerText += "Attack: " + squirtle.attack;
+        document.querySelector(".modalDefense3").innerText += "Defense " +squirtle.defense;
+        document.querySelector(".modalHp3").innerText += "Hit Points: " + squirtle.hp;
         let abilityArr = squirtle.abilities;
-        let text=[""];
+        let text=[];
         for (let i = 0; i < abilityArr.length; i++) {
           text += abilityArr[i].ability.name + ", ";
-          document.querySelector(".modalAbilities3").innerText = text;
+          document.querySelector(".modalAbilities3").innerText = "Abilities: " + text;
         }
       })
       axios.get(loudredAPI)
@@ -123,15 +127,15 @@ function trainerCLicked(){
 
         let loudred = new Pokemon(response);
 
-        document.querySelector('.modalName1').innerText = loudred.name;
-        document.querySelector('.modalAttack1').innerText = loudred.attack;
-        document.querySelector('.modalDefense1').innerText = loudred.defense;
-        document.querySelector('.modalHp1').innerText = loudred.hp;
+        document.querySelector('.modalName1').innerText += " Name " + loudred.name;
+        document.querySelector('.modalAttack1').innerText += "Attack: " + loudred.attack;
+        document.querySelector('.modalDefense1').innerText += "Defense" + loudred.defense;
+        document.querySelector('.modalHp1').innerText += "Hit Points: " + loudred.hp;
         let abilityArr = loudred.abilities;
         let text=[""];
         for (let i = 0; i < abilityArr.length; i++) {
           text += abilityArr[i].ability.name + ", ";
-          document.querySelector('.modalAbilities1').innerText = text;
+          document.querySelector('.modalAbilities1').innerText =  "Abilities: " + text;
         }
       })
     } else if (trainerId === "trainer2"){
@@ -143,15 +147,15 @@ function trainerCLicked(){
 
           let squirtle = new Pokemon(response);
 
-          document.querySelector(".modalName1").innerText = squirtle.name
-          document.querySelector(".modalAttack1").innerText = squirtle.attack;
-          document.querySelector(".modalDefense1").innerText = squirtle.defense;
-          document.querySelector(".modalHp1").innerText = squirtle.hp;
+          document.querySelector(".modalName1").innerText += " Name " + squirtle.name
+          document.querySelector(".modalAttack1").innerText += "Attack:" + squirtle.attack;
+          document.querySelector(".modalDefense1").innerText += "Defense" + squirtle.defense;
+          document.querySelector(".modalHp1").innerText += "Hit Points: " + squirtle.hp;
           let abilityArr = squirtle.abilities;
           let text=[""];
           for (let i = 0; i < abilityArr.length; i++) {
             text += abilityArr[i].ability.name + ", ";
-            document.querySelector(".modalAbilities1").innerText = text;
+            document.querySelector(".modalAbilities1").innerText = "Abilities: " + text;
           }
         })
 
@@ -160,16 +164,16 @@ function trainerCLicked(){
 
           let meowth = new Pokemon(response);
 
-          document.querySelector('.modalName2').innerText = meowth.name;
-          document.querySelector('.modalAttack2').innerText = meowth.attack;
-          document.querySelector('.modalDefense2').innerText = meowth.defense;
-          document.querySelector('.modalHp2').innerText = meowth.hp;
+          document.querySelector('.modalName2').innerText += " Name: " + meowth.name;
+          document.querySelector('.modalAttack2').innerText += "Attack: " + meowth.attack;
+          document.querySelector('.modalDefense2').innerText += "Defense: " + meowth.defense;
+          document.querySelector('.modalHp2').innerText += "Hit Points: " + meowth.hp;
 
           let abilityArr = meowth.abilities;
-          let text = [""];
+          let text = [];
           for (let i = 0; i < abilityArr.length; i++) {
             text += abilityArr[i].ability.name + ", ";
-            document.querySelector('.modalAbilities1').innertext = text;
+            document.querySelector('.modalAbilities2').innertext =  "Abilities: " + text;
           }
         })
         axios.get(charmanderAPI)
@@ -177,15 +181,15 @@ function trainerCLicked(){
 
           let charmander = new Pokemon(response);
 
-          document.querySelector('.modalName3').innerText = charmander.name;
-          document.querySelector('.modalAttack3').innerText = charmander.attack;
-          document.querySelector('.modalDefense3').innerText = charmander.defense;
-          document.querySelector('.modalHp3').innerText = charmander.hp;
+          document.querySelector('.modalName3').innerText += " Name " + charmander.name;
+          document.querySelector('.modalAttack3').innerText += "Attack: " + charmander.attack;
+          document.querySelector('.modalDefense3').innerText += "Defense " + charmander.defense;
+          document.querySelector('.modalHp3').innerText += "Hit Points: " +charmander.hp;
           let abilityArr = charmander.abilities;
           let text = [""];
           for (let i = 0; i < abilityArr.length; i++) {
             text += abilityArr[i].ability.name + ", ";
-            document.querySelector('.modalAbilities3').innerText = text;
+            document.querySelector('.modalAbilities3').innerText = "Abilities: " + text
           }
         })
     }  else {
@@ -198,15 +202,15 @@ function trainerCLicked(){
 
           let haunter = new Pokemon(response);
 
-          document.querySelector('.modalName1').innerText = haunter.name;
-          document.querySelector('.modalAttack1').innerText = haunter.attack;
-          document.querySelector('.modalDefense1').innerText = haunter.defense;
-          document.querySelector('.modalHp1').innerText = haunter.hp;
+          document.querySelector('.modalName1').innerText += " Name " + haunter.name;
+          document.querySelector('.modalAttack1').innerText += " Attack:" + haunter.attack;
+          document.querySelector('.modalDefense1').innerText += "Defense " + haunter.defense;
+          document.querySelector('.modalHp1').innerText +=  "Hit Points: " + haunter.hp;
           let abilityArr = haunter.abilities;
           let text = [""];
           for (let i = 0; i < abilityArr.length; i++) {
             text += abilityArr[i].ability.name + ", ";
-            document.querySelector('.modalAbilities1').innerText = text;
+            document.querySelector('.modalAbilities1').innerText =  "Abilities: " + text
           }
         })
 
@@ -215,15 +219,15 @@ function trainerCLicked(){
 
           let absol = new Pokemon(response);
 
-          document.querySelector('.modalName2').innerText = absol.name;
-          document.querySelector('.modalAttack2').innerText = absol.attack;
-          document.querySelector('.modalDefense2').innerText = absol.defense;
-          document.querySelector('.modalHp2').innerText = absol.hp;
+          document.querySelector('.modalName2').innerText +=" Name " + absol.name;
+          document.querySelector('.modalAttack2').innerText +="Attack: " +  absol.attack;
+          document.querySelector('.modalDefense2').innerText += "Defense " + absol.defense;
+          document.querySelector('.modalHp2').innerText += "Hit Points: " +absol.hp;
           let abilityArr = absol.abilities;
           let text = [""];
           for (let i = 0; i < abilityArr.length; i++) {
             text += abilityArr[i].ability.name + ", ";
-            document.querySelector('.modalAbilities2').innerText = text;
+            document.querySelector('.modalAbilities2').innerText = "Abilities: " + text
           }
         })
         axios.get(groudonAPI)
@@ -231,15 +235,15 @@ function trainerCLicked(){
 
           let groudon = new Pokemon(response);
 
-          document.querySelector('.modalName3').innerText = groudon.name;
-          document.querySelector('.modalAttack3').innerText = groudon.attack;
-          document.querySelector('.modalDefense3').innerText = groudon.defense;
-          document.querySelector('.modalHp3').innerText = groudon.hp;
+          document.querySelector('.modalName3').innerText +=  " Name " +groudon.name;
+          document.querySelector('.modalAttack3').innerText += " Attack:" + groudon.attack;
+          document.querySelector('.modalDefense3').innerText += "Defense " +groudon.defense;
+          document.querySelector('.modalHp3').innerText += "Hit Points: " + groudon.hp;
           let abilityArr = groudon.abilities;
           let text = [""];
           for (let i = 0; i < abilityArr.length; i++) {
             text += abilityArr[i].ability.name + ", ";
-            document.querySelector('.modalAbilities3').innerText = text;
+            document.querySelector('.modalAbilities3').innerText = "Abilities: " + text;
           }
         })
     }
@@ -275,5 +279,11 @@ trainerInfo3.classList.remove("hidden");
 Trainer3.addEventListener('mouseout', function(){
 trainerInfo3.classList.add("hidden");
 })
+$body = $("body");
+// possible LOADING FADER - DOESNT GO AWAY THOUGH!
+// $(document).on({
+//     ajaxStart: function() { $body.addClass("loading");    },
+//      ajaxStop: function() { $body.removeClass("loading"); }    
+// });
 
 });
