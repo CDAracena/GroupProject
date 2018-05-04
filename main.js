@@ -25,7 +25,29 @@ class Pokemon {
   }
 }
 
+class Trainer{
+    constructor(name){
+        this.name=name;
+        this.roster = {};
+      
+        }
+        add(thisName){
+            let pokemonIndex = this.roster.length+1;
+            // let thisApi = pokemonNameString+"API"
+            // console.log(thisApi)
+            // this.roster.thisApi = thisApi;
+            this.roster[pokemonIndex] = thisName;
+        }
+        get(pokemonName){
+            return this.roster.pokemonName;
+        }
+        all(){
+            return this.roster;
+        }
 
+    }
+
+    
 // DeliBird Response
 axios.get(delibirdAPI)
 .then (function(response) {
@@ -115,6 +137,7 @@ axios.get(groudonAPI)
   }
 })
 
+
 // Meowth Info
 axios.get(meowthAPI)
 .then(function(response){
@@ -146,3 +169,41 @@ axios.get(charmanderAPI)
   }
 })
 
+let trainer1 = new Trainer;
+trainer1.add("squirtle");
+trainer1.add("meowth");
+trainer1.add("charmander");
+console.log(trainer1);
+let trainer2 = new Trainer;
+let trainer3 = new Trainer;
+ 
+let firstGif = $('#firstGif');
+let secondGif = $('#secondGif');
+let thirdGif = $('#thirdGif');
+
+function trainerCLicked(){
+    let trainerId = this.id;
+    console.log(trainerId);
+    if (trainerId === "trainer1"){
+        firstGif.attr('src', "pokemonSprites/loudredSprite.gif");
+        secondGif.attr('src', "pokemonSprites/delibirdSprite.gif"); 
+        thirdGif.attr('src', "pokemonSprites/squirtleSprite.gif");
+    } else if (trainerId === "trainer2"){
+        firstGif.attr('src', "pokemonSprites/squirtleSprite.gif");
+        secondGif.attr('src', "pokemonSprites/bouncingMeowth.gif");
+        thirdGif.attr('src', "pokemonSprites/charmanderSprite.gif")
+    }  else {
+        firstGif.attr('src', "pokemonSprites/haunterSprite.gif")
+        secondGif.attr('src', "pokemonSprites/absolSprite.gif")
+        thirdGif.attr('src', "pokemonSprites/groundonSprite.gif")
+    }
+
+}
+$(".trainer").click(trainerCLicked);
+    
+
+    
+// $(".trainer").click(function(){
+//    // return the pokemon in that trainers object
+//     }
+// })
