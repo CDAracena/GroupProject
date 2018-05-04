@@ -54,7 +54,7 @@ axios.get(delibirdAPI)
   console.log(response);
 let delibird = new Pokemon(response);
 
-  document.querySelector("#pokemonModal").innerText = delibird.name + delibird.hp + delibird.attack + delibird.defense;
+  document.querySelector(".modal-body").innerText = delibird.name + delibird.hp + delibird.attack + delibird.defense;
   let abilityArr = delibird.abilities;
   let text = [""];
   for (let i = 0; i < abilityArr.length; i++) {
@@ -69,7 +69,7 @@ axios.get(squirtleAPI)
 
   let squirtle = new Pokemon(response);
 
-  document.querySelector("#pokemonModal").innerText = squirtle.name + squirtle.hp + squirtle.attack + squirtle.defense;
+  document.querySelector(".modal-body").innerText = squirtle.name + squirtle.hp + squirtle.attack + squirtle.defense;
   let abilityArr = squirtle.abilities;
   let text=[""];
   for (let i = 0; i < abilityArr.length; i++) {
@@ -84,7 +84,7 @@ axios.get(loudredAPI)
 
   let loudred = new Pokemon(response);
 
-  document.querySelector('#pokemonModal').innerText = loudred.name + loudred.hp + loudred.attack + loudred.defense;
+  document.querySelector('.modal-body').innerText = loudred.name + loudred.hp + loudred.attack + loudred.defense;
   let abilityArr = loudred.abilities;
   let text=[""];
   for (let i = 0; i < abilityArr.length; i++) {
@@ -99,7 +99,7 @@ axios.get(absolAPI)
 
   let absol = new Pokemon(response);
 
-  document.querySelector('#poke-3').innerText = absol.name + absol.hp + absol.attack + absol.defense;
+  document.querySelector('.modal-body').innerText = absol.name + absol.hp + absol.attack + absol.defense;
   let abilityArr = absol.abilities;
   let text = [""];
   for (let i = 0; i < abilityArr.length; i++) {
@@ -114,7 +114,7 @@ axios.get(haunterAPI)
 
   let haunter = new Pokemon(response);
 
-  document.querySelector('#pokemonModal').innerText = haunter.name + haunter.hp + haunter.attack + haunter.defense;
+  document.querySelector('.modal-body').innerText = haunter.name + haunter.hp + haunter.attack + haunter.defense;
   let abilityArr = haunter.abilities;
   let text = [""];
   for (let i = 0; i < abilityArr.length; i++) {
@@ -129,7 +129,7 @@ axios.get(groudonAPI)
 
   let groudon = new Pokemon(response);
 
-  document.querySelector('#pokemonModal').innerText = groudon.name + groudon.hp + groudon.attack + groudon.defense;
+  document.querySelector('.modal-body').innerText = groudon.name + groudon.hp + groudon.attack + groudon.defense;
   let abilityArr = groudon.abilities;
   let text = [""];
   for (let i = 0; i < abilityArr.length; i++) {
@@ -145,7 +145,7 @@ axios.get(meowthAPI)
 
   let meowth = new Pokemon(response);
 
-  document.querySelector('#poke-2').innerText = meowth.name + meowth.hp + meowth.attack + meowth.defense;
+  document.querySelector('.modal-body').innerText = meowth.name + meowth.hp + meowth.attack + meowth.defense;
   let abilityArr = meowth.abilities;
   let text = [""];
   for (let i = 0; i < abilityArr.length; i++) {
@@ -161,15 +161,15 @@ axios.get(charmanderAPI)
 
   let charmander = new Pokemon(response);
 
-  document.querySelector('#poke-1').innerText = charmander.name + charmander.hp + charmander.attack + charmander.defense;
+  document.querySelector('.modal-body').innerText = charmander.name + charmander.hp + charmander.attack + charmander.defense;
   let abilityArr = charmander.abilities;
   let text = [""];
   for (let i = 0; i < abilityArr.length; i++) {
     text += abilityArr[i].ability.name + "<br>";
   }
 })
-  
-// TypeWriter Function 
+
+// TypeWriter Function
 let i = 0;
 let txt = 'You have arrived to the VAPORWAVE GYM. Here you can see the stats of the best pokemon trainers of the district';
 let speed = 100
@@ -212,48 +212,45 @@ function trainerCLicked(){
         thirdGif.attr('src', "pokemonSprites/groundonSprite.gif")
     }
 
+}
+$(".trainer").click(trainerCLicked);
 
-let Trainer1 = document.querySelector(".trainer1");
-let Trainer2 = document.querySelector(".trainer2");
-let Trainer3 = document.querySelector(".trainer3");
+let Trainer1 = document.querySelector("#trainer1");
+let Trainer2 = document.querySelector("#trainer2");
+let Trainer3 = document.querySelector("#trainer3");
+let hiddenRemoval = document.querySelector('.hidden');
+
+
 
 Trainer1.addEventListener('mouseover', function(){
-  document.querySelector('#trainer-name').innerText = "Kiko";
+  hiddenRemoval.style.display="block";
 })
 
 Trainer1.addEventListener('mouseout', function(){
-  document.querySelector('#trainer-name').innerText = "Trainer Name";
+  hiddenRemoval.style.display="none";
 })
 
 
 Trainer2.addEventListener('mouseover', function(){
-  document.querySelector('#trainer-name').innerText = "ShayShay";
+  hiddenRemoval.style.display="block";
 })
 
 Trainer2.addEventListener('mouseout', function(){
-  document.querySelector('#trainer-name').innerText = "Trainer Name";
+  hiddenRemoval.style.display="none";
 })
 
 Trainer3.addEventListener('mouseover', function(){
-  document.querySelector('#trainer-name').innerText = "Guy Fieri";
+  hiddenRemoval.style.display="block";
 })
 
 Trainer3.addEventListener('mouseout', function(){
-  document.querySelector('#trainer-name').innerText = "Trainer Name";
+  hiddenRemoval.style.display="none";
 })
 
-}
-$(".trainer").click(trainerCLicked);
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 6ca89862e2c97e8547a6976f3e1e0fc6c5d9672f
 // $(".trainer").click(function(){
 //    // return the pokemon in that trainers object
 //     }
 // })
-  
-});
 
+});
