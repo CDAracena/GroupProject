@@ -2,14 +2,18 @@
   background: url("images/background-img.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 680px;
+  height: 60%;
 }
 .frame {
   background-color: #282727;
-  height: 35px;
+  height: 30px;
+}
+.hidden {
+  display: none;
 }
 img {
   height: 250px;
+  cursor: pointer;
 }
 .gif{
   height: 150px;
@@ -26,7 +30,6 @@ img {
   position: relative;
   left: 425px;
 }
-
 .title {
   font-family: Audiowide;
   font-size: 46px;
@@ -35,11 +38,9 @@ img {
   word-wrap: break-word;
   text-shadow: 0px 6px 15px rgba(0,0,0,0.8)
 }
-
 .pokemonModul{
   width: 900px !important
 }
-
 .box {
  opacity: 0.8;
  background: #9D94A5;
@@ -48,6 +49,7 @@ img {
  max-width: 85%;
  position: relative;
  top: 30%;
+ min-height: 300px;
 }
 .box2 {
   opacity: 0.8;
@@ -59,13 +61,13 @@ img {
   max-width: 80%;
 }
 .welcome-font {
-font-family: Audiowide-Regular;
+font-family: Audiowide;
 font-size: 14px;
 color: #FFFFFF;
 letter-spacing: 1.7px;
 }
 .welcome-sub-font {
-font-family: OpenSans-Semibold;
+font-family: 'Nova Square';
 font-size: 13px;
 color: #000000;
 }

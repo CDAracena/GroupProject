@@ -1,4 +1,4 @@
-
+$( document ).ready(function() {
 let delibirdAPI = "http://pokeapi.co/api/v2/pokemon/225/";
 
 let squirtleAPI = "http://pokeapi.co/api/v2/pokemon/7/";
@@ -168,6 +168,20 @@ axios.get(charmanderAPI)
     text += abilityArr[i].ability.name + "<br>";
   }
 })
+  
+// TypeWriter Function 
+let i = 0;
+let txt = 'You have arrived to the VAPORWAVE GYM. Here you can see the stats of the best pokemon trainers of the district';
+let speed = 100
+function typeWriter() {
+   if (i < txt.length) {
+      $("#typeWriter").html($("#typeWriter").html() + txt.charAt(i));
+      i++
+      setTimeout(typeWriter, speed);
+    }
+  }
+typeWriter();
+
 
 let trainer1 = new Trainer;
 trainer1.add("squirtle");
@@ -202,8 +216,9 @@ function trainerCLicked(){
 $(".trainer").click(trainerCLicked);
     
 
-    
 // $(".trainer").click(function(){
 //    // return the pokemon in that trainers object
 //     }
 // })
+  
+});
