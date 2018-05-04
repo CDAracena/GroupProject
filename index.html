@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel='stylesheet' href="main.css">
     <link rel="icon" href="https://image.flaticon.com/icons/png/512/280/280954.png">
 
@@ -25,16 +24,13 @@
           <div class="row">
             <div class="col-lg-2">
                <div class="col-lg-12 box text-center">
-                  <span class="welcome-font">Welcome to District X</span><br><br>
-                  <span class="welcome-sub-font" id="typeWriter">
-                  </span>
-                   <span class="text-white welcome-sub-font float-bottom"><br><br>
-                      Hover over a trainer to get started</span>
+                  <span class="md-audiowide">Welcome to District X</span><br><br>
+                  <span class="md-novasq-black" id="typeWriter"></span>
                </div>
             </div>
 
               <!-- pokemon trainer  -->
-               <div class="col-lg-10 col-sm-12">
+               <div class="col-lg-10 col-sm-12 hidden" id="trainer-info-1">
                 <div class="row box2 ml-4">
                   <div class="col-lg-4 text-center">
                      <span class="md-audiowide">Trainer Name:
@@ -59,7 +55,7 @@
                  </div>
                </div>
                <!-- pokemon trainer 2 -->
-               <div class="col-lg-10 col-sm-12 hidden">
+               <div class="col-lg-10 col-sm-12 hidden" id="trainer-info-2">
                 <div class="row box2 ml-4">
                   <div class="col-lg-4 text-center">
                      <span class="md-audiowide">Trainer Name:
@@ -85,7 +81,7 @@
                  </div>
                </div>
                <!-- pokemon trainer 3  -->
-               <div class="col-lg-10 col-sm-12 hidden">
+               <div class="col-lg-10 col-sm-12 hidden" id="trainer-info-3">
                 <div class="row box2 ml-4">
                   <div class="col-lg-4 text-center">
                      <span class="md-audiowide">Trainer Name:
@@ -115,7 +111,6 @@
 
 <!-- pokemon tainer images &  modals   -->
         <div class="img-position">
-         
 
          <div class="modal fade" id="myModal" role="dialog">
              <div class="modal-dialog" id="pokemonModal">
@@ -172,7 +167,9 @@
 
                  </div>
                </div>
+
           <img class="btn trainer" id="trainer1" data-toggle="modal" data-target ="#myModal" src="images/trainer1.png" alt="trainer1">
+
          <img class="btn trainer" id="trainer2" data-toggle="modal" data-target ="#myModal" src="images/trainer2.png" alt="trainer1">
          <img class="btn trainer" id= "trainer3" data-toggle="modal" data-target ="#myModal" src="images/trainer3.png" alt="trainer1">
        </div>

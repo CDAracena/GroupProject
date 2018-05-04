@@ -15,26 +15,9 @@ let groudonAPI = "http://pokeapi.co/api/v2/pokemon/383/";
 
 let haunterAPI ="http://pokeapi.co/api/v2/pokemon/93/";
 
-class Pokemon {
-  constructor(response) {function trainerCLicked(){
-    let trainerId = this.id;
-    console.log(trainerId);
-    if (trainerId === "trainer1"){
-        firstGif.attr('src', "pokemonSprites/loudredSprite.gif");
-        secondGif.attr('src', "pokemonSprites/delibirdSprite.gif");
-        thirdGif.attr('src', "pokemonSprites/squirtleSprite.gif");
-    } else if (trainerId === "trainer2"){
-        firstGif.attr('src', "pokemonSprites/squirtleSprite.gif");
-        secondGif.attr('src', "pokemonSprites/bouncingMeowth.gif");
-        thirdGif.attr('src', "pokemonSprites/charmanderSprite.gif")
-    }  else {
-        firstGif.attr('src', "pokemonSprites/haunterSprite.gif")
-        secondGif.attr('src', "pokemonSprites/absolSprite.gif")
-        thirdGif.attr('src', "pokemonSprites/groundonSprite.gif")
-    }
 
-}
-$(".trainer").click(trainerCLicked);
+class Pokemon {
+  constructor(response){
     this.name = response.data.name;
     this.hp = response.data.stats[5].base_stat;
     this.attack = response.data.stats[4].base_stat;
@@ -66,52 +49,6 @@ class Trainer{
 
     }
 
-
-
-// DeliBird Response
-axios.get(delibirdAPI)
-.then (function(response) {
-  console.log(response);
-delibird = new Pokemon(response);
-console.log(delibird)
-
-  document.querySelector(".modal-body").innerText = delibird.name + delibird.hp + delibird.attack + delibird.defense;
-  let abilityArr = delibird.abilities;
-  let text = [""];
-  for (let i = 0; i < abilityArr.length; i++) {
-    text += abilityArr[i].ability.name + "<br>";
-  }
-})
-
-// Squirtle Info
-axios.get(squirtleAPI)
-.then (function(response) {
-  console.log(response)
-
-  let squirtle = new Pokemon(response);
-
-  document.querySelector(".modal-body").innerText = squirtle.name + squirtle.hp + squirtle.attack + squirtle.defense;
-  let abilityArr = squirtle.abilities;
-  let text=[""];
-  for (let i = 0; i < abilityArr.length; i++) {
-    text += abilityArr[i].ability.name + "<br>";
-  }
-})
-
-// Loudred Info
-axios.get(loudredAPI)
-.then(function(response) {
-  console.log(response)
-
-  let loudred = new Pokemon(response);
-
-  document.querySelector('.modal-body').innerText = loudred.name + loudred.hp + loudred.attack + loudred.defense;
-  let abilityArr = loudred.abilities;
-  let text=[""];
-  for (let i = 0; i < abilityArr.length; i++) {
-    text += abilityArr[i].ability.name + "<br>";
-  }
-})
 
 // Absol Info
 axios.get(absolAPI)
@@ -223,6 +160,58 @@ function trainerCLicked(){
         firstGif.attr('src', "pokemonSprites/loudredSprite.gif");
         secondGif.attr('src', "pokemonSprites/delibirdSprite.gif");
         thirdGif.attr('src', "pokemonSprites/squirtleSprite.gif");
+
+        axios.get(delibirdAPI)
+        .then (function(response) {
+          console.log(response);
+        delibird = new Pokemon(response);
+        console.log(delibird)
+
+          document.querySelector(".modalName1").innerText = delibird.name;
+          document.querySelector(".modalAttack1").innerText = delibird.attack
+          document.querySelector(".modalDefense1").innerText = delibird.defense;
+          document.querySelector(".modalHp1").innerText = delibird.hp;
+          let abilityArr = delibird.abilities;
+          let text = [""];
+          for (let i = 0; i < abilityArr.length; i++) {
+            text += abilityArr[i].ability.name + ", ";
+            document.querySelector(".modalAbilities1").innerText = text
+        };
+      })
+      axios.get(squirtleAPI)
+      .then (function(response) {
+        console.log(response)
+
+        let squirtle = new Pokemon(response);
+
+        document.querySelector(".modalName2").innerText = squirtle.name
+        document.querySelector(".modalAttack2").innerText = squirtle.attack;
+        document.querySelector(".modalDefense2").innerText = squirtle.defense;
+        document.querySelector(".modalHp2").innerText = squirtle.hp;
+        let abilityArr = squirtle.abilities;
+        let text=[""];
+        for (let i = 0; i < abilityArr.length; i++) {
+          text += abilityArr[i].ability.name + ", ";
+          document.querySelector(".modalAbilities2").innerText = text;
+        }
+      })
+      axios.get(loudredAPI)
+      .then(function(response) {
+        console.log(response)
+
+        let loudred = new Pokemon(response);
+
+        document.querySelector('.modalName3').innerText = loudred.name;
+        document.querySelector('.modalAttack3').innerText = loudred.attack;
+        document.querySelector('.modalDefense3').innerText = loudred.defense;
+        document.querySelector('.modalHp3').innerText = loudred.hp;
+        let abilityArr = loudred.abilities;
+        let text=[""];
+        for (let i = 0; i < abilityArr.length; i++) {
+          text += abilityArr[i].ability.name + ", ";
+          document.querySelector('.modalAbilities3').innerText = text;
+        }
+      })
     } else if (trainerId === "trainer2"){
         firstGif.attr('src', "pokemonSprites/squirtleSprite.gif");
         secondGif.attr('src', "pokemonSprites/bouncingMeowth.gif");
@@ -240,33 +229,29 @@ $(".trainer").click(trainerCLicked);
 let Trainer1 = document.querySelector("#trainer1");
 let Trainer2 = document.querySelector("#trainer2");
 let Trainer3 = document.querySelector("#trainer3");
-let hiddenRemoval = document.querySelector('.hidden');
+let trainerInfo1 = document.querySelector("#trainer-info-1");
+let trainerInfo2 = document.querySelector("#trainer-info-2");
+let trainerInfo3 = document.querySelector("#trainer-info-3");
 
 
 
 Trainer1.addEventListener('mouseover', function(){
-  hiddenRemoval.style.display="block";
+ trainerInfo1.classList.remove("hidden");
 })
-
 Trainer1.addEventListener('mouseout', function(){
-  hiddenRemoval.style.display="none";
+ trainerInfo1.classList.add("hidden");
 })
-
-
 Trainer2.addEventListener('mouseover', function(){
-  hiddenRemoval.style.display="block";
+trainerInfo2.classList.remove("hidden");
 })
-
 Trainer2.addEventListener('mouseout', function(){
-  hiddenRemoval.style.display="none";
+trainerInfo2.classList.add("hidden");
 })
-
 Trainer3.addEventListener('mouseover', function(){
-  hiddenRemoval.style.display="block";
+trainerInfo3.classList.remove("hidden");
 })
-
 Trainer3.addEventListener('mouseout', function(){
-  hiddenRemoval.style.display="none";
+trainerInfo3.classList.add("hidden");
 })
 
 });
