@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel='stylesheet' href="main.css">
     <link rel="icon" href="https://image.flaticon.com/icons/png/512/280/280954.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     <title>VPWgym - Pokemon Red</title>
   </head>
@@ -16,13 +18,13 @@
 
       <div class="row">
 
-        <div class="col-lg-1">
+        <div class="col-lg-1 centered">
           <h1 class="title">Vaporwave Gym</h1>
         </div>
 
         <div class="col-lg-11">
           <div class="row">
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-sm-3">
                <div class="col-lg-12 box text-center">
                   <span class="md-audiowide">Welcome to District X</span><br><br>
                   <span class="md-novasq-black" id="typeWriter"></span>
@@ -30,15 +32,15 @@
             </div>
 
               <!-- pokemon trainer  -->
-               <div class="col-lg-10 col-sm-12 hidden" id="trainer-info-1">
-                <div class="row box2 ml-4">
-                  <div class="col-lg-4 text-center">
+               <div class="col-lg-10 col-sm-9 hidden" id="trainer-info-1">
+                <div class="row box2">
+                  <div class="col-lg-4 col-sm-12 text-center">
                      <span class="md-audiowide">Trainer Name:
                        <br><span class="lg-novasq-white"> Kiko</span>
                      </span>
                   </div>
 
-                  <div class="col-lg-4 text-center">
+                  <div class="col-lg-4 col-sm-12 text-center">
                      <span class="md-audiowide">Pokemon Roster: <br>
                        <div class="pokeName md-novasq-black">Delibird</div>
                        <div class="pokeName md-novasq-black">Squirtle </div>
@@ -46,7 +48,7 @@
                      </span>
                    </div>
 
-                  <div class="col-lg-4 text-center">
+                  <div class="col-lg-4 col-sm-12 text-center">
                      <span class="md-audiowide">Fun Fact:<br> <span class="md-novasq-black">
                        Enjoys rollerblading on the beach and dancing merengue. <br> Will work for mangu
                      </span>
@@ -55,8 +57,8 @@
                  </div>
                </div>
                <!-- pokemon trainer 2 -->
-               <div class="col-lg-10 col-sm-12 hidden" id="trainer-info-2">
-                <div class="row box2 ml-4">
+               <div class="col-lg-10 col-sm-9 hidden" id="trainer-info-2">
+                <div class="row box2">
                   <div class="col-lg-4 text-center">
                      <span class="md-audiowide">Trainer Name:
                        <br><span class="lg-novasq-white"> ShayShay</span>
@@ -81,8 +83,8 @@
                  </div>
                </div>
                <!-- pokemon trainer 3  -->
-               <div class="col-lg-10 col-sm-12 hidden" id="trainer-info-3">
-                <div class="row box2 ml-4">
+               <div class="col-lg-10 col-sm-9 hidden" id="trainer-info-3">
+                <div class="row box2">
                   <div class="col-lg-4 text-center">
                      <span class="md-audiowide">Trainer Name:
                        <br><span class="lg-novasq-white">Guy Fieri</span>
@@ -149,6 +151,7 @@
 
                            </div>
                            <div class = "col-sm-4">
+
                               <p class = "modalName3  stat">Name: </p>
                               <p class = "modalAttack3  stat"> Attack:</p>
                               <p class = "modalDefense3  stat">Defense: </p>
@@ -157,8 +160,8 @@
 
                              </div>
 
-
                        </div>
+
 
                      <div class="modal-footer">
                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -168,8 +171,7 @@
                  </div>
                </div>
 
-          <img class="btn trainer" id="trainer1" data-toggle="modal" data-target ="#myModal" src="images/trainer1.png" alt="trainer1">
-
+         <img class="btn trainer" id="trainer1" data-toggle="modal" data-target ="#myModal" src="images/trainer1.png" alt="trainer1">
          <img class="btn trainer" id="trainer2" data-toggle="modal" data-target ="#myModal" src="images/trainer2.png" alt="trainer1">
          <img class="btn trainer" id= "trainer3" data-toggle="modal" data-target ="#myModal" src="images/trainer3.png" alt="trainer1">
        </div>
@@ -177,17 +179,13 @@
       </div>
     </div>
   </div>
-
-
+</div>
 
 <div class="container-fluid frame"></div>
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
-
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-
-
 <script src="main.js"> </script>
 </body>
 </html>
