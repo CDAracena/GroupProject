@@ -133,7 +133,7 @@ axios.get(groudonAPI)
   let abilityArr = groudon.abilities;
   let text = [""];
   for (let i = 0; i < abilityArr.length; i++) {
-    text += ability[i].ability.name + "<br>";
+    text += abilityArr[i].ability.name + "<br>";
   }
 })
 
@@ -149,7 +149,7 @@ axios.get(meowthAPI)
   let abilityArr = meowth.abilities;
   let text = [""];
   for (let i = 0; i < abilityArr.length; i++) {
-    text += ability[i].ability.name + "<br>";
+    text += abilityArr[i].ability.name + "<br>";
   }
 })
 
