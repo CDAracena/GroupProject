@@ -95,9 +95,9 @@ function trainerCLicked(){
         delibird = new Pokemon(response);
         console.log(delibird)
 
-          document.querySelector(".modalName2").innerText += " Name " + delibird.name;
+          document.querySelector(".modalName2").innerText += " Name: " + delibird.name;
           document.querySelector(".modalAttack2").innerText += "Attack: " + delibird.attack
-          document.querySelector(".modalDefense2").innerText += "Defense " + delibird.defense;
+          document.querySelector(".modalDefense2").innerText += "Defense: " + delibird.defense;
           document.querySelector(".modalHp2").innerText += "Hit Points: "+  delibird.hp;
           let abilityArr = delibird.abilities;
           let text = [];
@@ -111,9 +111,9 @@ function trainerCLicked(){
 
         let squirtle = new Pokemon(response);
 
-        document.querySelector(".modalName3").innerText += " Name " + squirtle.name
+        document.querySelector(".modalName3").innerText += " Name: " + squirtle.name
         document.querySelector(".modalAttack3").innerText += "Attack: " + squirtle.attack;
-        document.querySelector(".modalDefense3").innerText += "Defense " +squirtle.defense;
+        document.querySelector(".modalDefense3").innerText += "Defense: " +squirtle.defense;
         document.querySelector(".modalHp3").innerText += "Hit Points: " + squirtle.hp;
         let abilityArr = squirtle.abilities;
         let text=[];
@@ -127,9 +127,9 @@ function trainerCLicked(){
 
         let loudred = new Pokemon(response);
 
-        document.querySelector('.modalName1').innerText += " Name " + loudred.name;
+        document.querySelector('.modalName1').innerText += " Name: " + loudred.name;
         document.querySelector('.modalAttack1').innerText += "Attack: " + loudred.attack;
-        document.querySelector('.modalDefense1').innerText += "Defense" + loudred.defense;
+        document.querySelector('.modalDefense1').innerText += "Defense:" + loudred.defense;
         document.querySelector('.modalHp1').innerText += "Hit Points: " + loudred.hp;
         let abilityArr = loudred.abilities;
         let text=[""];
@@ -147,9 +147,9 @@ function trainerCLicked(){
 
           let squirtle = new Pokemon(response);
 
-          document.querySelector(".modalName1").innerText += " Name " + squirtle.name
+          document.querySelector(".modalName1").innerText += " Name: " + squirtle.name
           document.querySelector(".modalAttack1").innerText += "Attack:" + squirtle.attack;
-          document.querySelector(".modalDefense1").innerText += "Defense" + squirtle.defense;
+          document.querySelector(".modalDefense1").innerText += "Defense:" + squirtle.defense;
           document.querySelector(".modalHp1").innerText += "Hit Points: " + squirtle.hp;
           let abilityArr = squirtle.abilities;
           let text=[""];
@@ -173,7 +173,7 @@ function trainerCLicked(){
           let text = [];
           for (let i = 0; i < abilityArr.length; i++) {
             text += abilityArr[i].ability.name + ", ";
-            document.querySelector('.modalAbilities2').innertext =  "Abilities: " + text;
+            document.querySelector('.modalAbilities2').innertext = "MEOWTH AINT GOT NO ABILITES";
           }
         })
         axios.get(charmanderAPI)
@@ -181,9 +181,9 @@ function trainerCLicked(){
 
           let charmander = new Pokemon(response);
 
-          document.querySelector('.modalName3').innerText += " Name " + charmander.name;
+          document.querySelector('.modalName3').innerText += " Name: " + charmander.name;
           document.querySelector('.modalAttack3').innerText += "Attack: " + charmander.attack;
-          document.querySelector('.modalDefense3').innerText += "Defense " + charmander.defense;
+          document.querySelector('.modalDefense3').innerText += "Defense: " + charmander.defense;
           document.querySelector('.modalHp3').innerText += "Hit Points: " +charmander.hp;
           let abilityArr = charmander.abilities;
           let text = [""];
@@ -202,9 +202,9 @@ function trainerCLicked(){
 
           let haunter = new Pokemon(response);
 
-          document.querySelector('.modalName1').innerText += " Name " + haunter.name;
+          document.querySelector('.modalName1').innerText += " Name: " + haunter.name;
           document.querySelector('.modalAttack1').innerText += " Attack:" + haunter.attack;
-          document.querySelector('.modalDefense1').innerText += "Defense " + haunter.defense;
+          document.querySelector('.modalDefense1').innerText += "Defense: " + haunter.defense;
           document.querySelector('.modalHp1').innerText +=  "Hit Points: " + haunter.hp;
           let abilityArr = haunter.abilities;
           let text = [""];
@@ -219,9 +219,9 @@ function trainerCLicked(){
 
           let absol = new Pokemon(response);
 
-          document.querySelector('.modalName2').innerText +=" Name " + absol.name;
+          document.querySelector('.modalName2').innerText +=" Name: " + absol.name;
           document.querySelector('.modalAttack2').innerText +="Attack: " +  absol.attack;
-          document.querySelector('.modalDefense2').innerText += "Defense " + absol.defense;
+          document.querySelector('.modalDefense2').innerText += "Defense: " + absol.defense;
           document.querySelector('.modalHp2').innerText += "Hit Points: " +absol.hp;
           let abilityArr = absol.abilities;
           let text = [""];
@@ -235,9 +235,9 @@ function trainerCLicked(){
 
           let groudon = new Pokemon(response);
 
-          document.querySelector('.modalName3').innerText +=  " Name " +groudon.name;
+          document.querySelector('.modalName3').innerText +=  " Name: " +groudon.name;
           document.querySelector('.modalAttack3').innerText += " Attack:" + groudon.attack;
-          document.querySelector('.modalDefense3').innerText += "Defense " +groudon.defense;
+          document.querySelector('.modalDefense3').innerText += "Defense: " +groudon.defense;
           document.querySelector('.modalHp3').innerText += "Hit Points: " + groudon.hp;
           let abilityArr = groudon.abilities;
           let text = [""];
