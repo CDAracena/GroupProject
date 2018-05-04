@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
     <link rel='stylesheet' href="main.css">
     <link rel="icon" href="https://image.flaticon.com/icons/png/512/280/280954.png">
@@ -25,64 +26,98 @@
             <div class="col-lg-2">
                <div class="col-lg-12 box text-center">
                   <span class="welcome-font">Welcome to District X</span><br><br>
-                  <span class="welcome-sub-font">You have arrived to the
-                   VAPORWAVE GYM.<br>
-                   Here you see the stats of the best
-                   pokemon trainers of the district <br><br>
-                   <span class="text-white"> Hover over a trainer to get started</span>
+                  <span class="welcome-sub-font" id="typeWriter">
                   </span>
+                   <span class="text-white welcome-sub-font float-bottom"><br><br>
+
+                      Hover over a trainer to get started</span>
                </div>
             </div>
 
-
-               <div class="col-lg-10">
+              <!-- pokemon trainer  -->
+               <div class="col-lg-10 hidden">
                 <div class="row box2 ml-4">
                   <div class="col-lg-4 text-center">
-                     <span id="trainer-name">Trainer Name</span>
+                     <span class="trainer-name">Trainer Name: <br> Kiko</span>
                   </div>
 
                   <div class="col-lg-4 text-center">
                      <span id="roster">Roster of Pokemon
-                       <div id="poke-1">Pokemon 1</div>
-                       <div id="poke-2">pokemon 2</div>
-                       <div id="poke-3">pokemon 3</div>
+                       <div id="poke-1">Pokemon 1: Delibird</div>
+                       <div id="poke-2">pokemon 2: Squirtle </div>
+                       <div id="poke-3">pokemon 3: Loudred </div>
                      </span>
                    </div>
 
                   <div class="col-lg-4 text-center">
-                     <span id="fun-fact">Fun Fact blah blah blah blah lorem </span>
+                     <span id="fun-fact">Fun Fact: Enjoys rollerblading on the beach and likes dancing merengue & will work for mangu </span>
+                  </div>
+                 </div>
+               </div>
+               <!-- pokemon trainer 2 -->
+               <div class="col-lg-10 hidden">
+                <div class="row box2 ml-4">
+                  <div class="col-lg-4 text-center">
+                     <span id="trainer-name">Trainer Name: <br> ShayShay </span>
+                  </div>
+
+                  <div class="col-lg-4 text-center">
+                     <span id="roster">Roster of Pokemon
+                       <div id="poke-1">Pokemon 1: Meowth</div>
+                       <div id="poke-2">pokemon 2: Charmander </div>
+                       <div id="poke-3">pokemon 3: Squirtle</div>
+                     </span>
+                   </div>
+
+                  <div class="col-lg-4 text-center">
+                     <span id="fun-fact">Fun Fact: </span>
+                  </div>
+                 </div>
+               </div>
+               <!-- pokemon trainer 3  -->
+               <div class="col-lg-10 hidden ">
+                <div class="row box2 ml-4">
+                  <div class="col-lg-4 text-center">
+                     <span id="trainer-name">Trainer Name: <br> Guy Fieri</span>
+                  </div>
+
+                  <div class="col-lg-4 text-center">
+                     <span id="roster">Roster of Pokemon
+                       <div id="poke-1">Pokemon 1: Absol</div>
+                       <div id="poke-2">pokemon 2: Haunter</div>
+                       <div id="poke-3">pokemon 3: Groudon</div>
+                     </span>
+                   </div>
+
+                  <div class="col-lg-4 text-center">
+                     <span id="fun-fact">Fun Fact: If you beat him in a battle you'll have to come to flavor town. Half off appetizer between 6PM & 7PM </span>
                   </div>
                  </div>
                </div>
              </div>
 
 
-               <div class="img-position">
-                 <img class="trainer1" src="images/trainer1.png" alt="trainer1">
-                 <img class="trainer2" src="images/trainer2.png" alt="trainer2">
-                 <img class="trainer3" src="images/trainer3.png" alt="trainer3">
-               </div>
 
-        </div>
-<!-- closes entire screen row and background img  -->
+        <div class="img-position">
+         <img class="btn trainer" id="trainer1"data-toggle="modal" data-target ="#myModal" src="images/trainer1.png" alt="trainer1">
+         <button type="button" >testButton</button>
 
-         <button type="button" class = "btn btn-info btn-lg" data-toggle="modal" data-target ="#myModal">testButton</button>
          <div class="modal fade" id="myModal" role="dialog">
-             <div class="modal-dialog" id="pokemonModul">
-                 <div class="modal-content pokemonModul ">
+             <div class="modal-dialog" id="pokemonModal">
+                 <div class="modal-content pokemonModal ">
                      <div class="modal-header">
                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                        <h4 class="modal-title">CHOOSE YOUR POKEMON</h4>
                      </div>
                      <div class="modal-body row border-top">
                        <div class="col-sm-4 pull-left">
-                         <img id ="firstGif"src="pokemonSprites/absolSprite.gif">
+                         <img id ="firstGif" class ="gif" src="">
                        </div>
                        <div class="col-ssm-4 algin-content-center">
-                         <img id = "secondGif" src="pokemonSprites/charmanderSprite.gif">
+                         <img id ="secondGif" class ="gif" src="">
                        </div>
-                       <div class="col-sm-4 pull-right">
-                         <img id = "thirdGif" src ="pokemonSprites/loudredSprite.gif">
+                       <div class="col-sm-4 float-right">
+                         <img id = "thirdGif"  class ="gif float-right" src ="">
                        </div>
                          <p>HERES SOME STUFF ABOUT THEMZ</p>
                        </div>
@@ -109,6 +144,10 @@
 
                  </div>
                </div>
+
+         <img class="btn trainer" id="trainer2" data-toggle="modal" data-target ="#myModal" src="images/trainer2.png" alt="trainer1">
+         <img class="btn trainer" id= "trainer3" data-toggle="modal" data-target ="#myModal" src="images/trainer3.png" alt="trainer1">
+       </div>
 
        </div>
 
