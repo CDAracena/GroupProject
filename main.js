@@ -16,7 +16,25 @@ let groudonAPI = "http://pokeapi.co/api/v2/pokemon/383/";
 let haunterAPI ="http://pokeapi.co/api/v2/pokemon/93/";
 
 class Pokemon {
-  constructor(response) {
+  constructor(response) {function trainerCLicked(){
+    let trainerId = this.id;
+    console.log(trainerId);
+    if (trainerId === "trainer1"){
+        firstGif.attr('src', "pokemonSprites/loudredSprite.gif");
+        secondGif.attr('src', "pokemonSprites/delibirdSprite.gif");
+        thirdGif.attr('src', "pokemonSprites/squirtleSprite.gif");
+    } else if (trainerId === "trainer2"){
+        firstGif.attr('src', "pokemonSprites/squirtleSprite.gif");
+        secondGif.attr('src', "pokemonSprites/bouncingMeowth.gif");
+        thirdGif.attr('src', "pokemonSprites/charmanderSprite.gif")
+    }  else {
+        firstGif.attr('src', "pokemonSprites/haunterSprite.gif")
+        secondGif.attr('src', "pokemonSprites/absolSprite.gif")
+        thirdGif.attr('src', "pokemonSprites/groundonSprite.gif")
+    }
+
+}
+$(".trainer").click(trainerCLicked);
     this.name = response.data.name;
     this.hp = response.data.stats[5].base_stat;
     this.attack = response.data.stats[4].base_stat;
